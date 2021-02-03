@@ -73,8 +73,7 @@ public class Lotto {
 		return result; 
 	}
 	
-	private int[] sortLotto(int[] numbers) { // 정렬
-//		Arrays.sort(numbers);
+	private void sortLotto(int[] numbers) { // 정렬
 		for(int i = 0; i<numbers.length-1; i++) {
 			if(numbers[i]>numbers[i+1]) {
 				int temp = numbers[i];
@@ -83,7 +82,6 @@ public class Lotto {
 				i=-1;
 			}
 		}
-		return numbers;
 	}
 	
 	private void print(int[] numbers) { // 출력하기
