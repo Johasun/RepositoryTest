@@ -6,12 +6,14 @@ import java.util.Scanner;
 
 public class Lotto {
 	
+	static final int SIZE = 6; // 로또의 길이
+	static final int MAX = 45; // 랜덤 숫자 범위
 	private int[] numbers;
 	private Scanner scanner;
 	private Random r;
 	
 	public Lotto() {
-		numbers = new int[6];
+		numbers = new int[SIZE];
 		scanner = new Scanner(System.in);
 		r = new Random();
 	}
@@ -46,7 +48,7 @@ public class Lotto {
 	public void selectLottoNumbers() { // 추출하기
 
 		for(int i = 0; i<numbers.length; i++) {
-			int random = (int)(Math.random()*45)+1; // 랜덤번호 추출
+			int random = (int)(Math.random()*MAX)+1; // 랜덤번호 추출
 			
 			boolean extract = removeOverlap(random); // true / false 값 받기
 			
