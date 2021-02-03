@@ -50,10 +50,10 @@ public class Lotto {
 			
 			boolean extract = removeOverlap(random); // true / false 값 받기
 			
-			if(extract == false) { // 이미 배열에 있는 숫자라면 
-				random = (int)(Math.random()*45)+1; // 다시 뽑는다.
+			if(!extract) { // 이미 배열에 있는 숫자라면 (false값)
+				i--; 
 				
-			} else if(extract == true) { // 없으면 
+			} else  { // 없으면 
 				numbers[i] = random; // 배열에 넣어주기
 			}
 		}
